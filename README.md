@@ -45,7 +45,7 @@ Add the following Application Parameter to your application configuration: Plugi
 
 ```xml
 <parameters>
-	<parameer id="PluginContentId" value='my-layout-content-id' />
+	<parameter id="PluginContentId" value='my-layout-content-id' />
 </parameters>
 ```
 
