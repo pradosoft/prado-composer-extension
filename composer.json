@@ -21,6 +21,12 @@
 			"PradoComposerExtension\\": "src"
 		}
 	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		}
+	],
 	"require": {
 		"pradosoft/prado" : ">=4.2.0-alpha1"
 	},
