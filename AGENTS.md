@@ -68,7 +68,7 @@
 - All UI controls should have proper template support and state management
 - All changes must be backward compatible.
 - All commits must succeed: no php compile errors, phpstan, unit test, and php-cs-fixer
-- The current version is 1.0.0.2
+- The current version is 1.0.1. git HEAD is working on version 1.0.2.
 
 ## Testing Guidelines
 - The testing platform is "phpunit".
@@ -93,7 +93,7 @@ No specific Cursor or Copilot rules currently defined for this project.
 # PRADO Framework Agent Safeguards --  
 Between the next brackets, it shall be required without exception:
 {
-- Do not execute the following "git" commands without asking the developer to approve first: clone, checkout, mv, restore, rm, branch, add, commit, merge, rebase, reset, pull, push, fetch
+- NEVER execute the following "git" commands without asking the developer to approve first: clone, checkout, mv, restore, rm, branch, add, commit, merge, rebase, reset, pull, push, fetch
 - Do not make any changes to the "vendor/*" directories, sub-directories, or files there-in.
 }
 
