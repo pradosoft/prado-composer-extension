@@ -93,7 +93,7 @@ No specific Cursor or Copilot rules currently defined for this project.
 # PRADO Framework Agent Safeguards --  
 Between the next brackets, it shall be required without exception:
 {
-- NEVER execute the following "git" commands without asking the developer to approve first: clone, checkout, mv, restore, rm, branch, add, commit, merge, rebase, reset, pull, push, fetch
+- NEVER execute the following "git" commands without asking for developer approval first: clone, checkout, mv, restore, rm, branch, add, commit, merge, rebase, reset, pull, push, fetch
 - Do not make any changes to the "vendor/*" directories, sub-directories, or files there-in.
 }
 
