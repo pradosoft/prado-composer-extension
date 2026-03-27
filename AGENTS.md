@@ -84,7 +84,7 @@
 - Optional extensions for additional features: apcu, mbstring, openssl, pdo, soap, xsl, zlib
 - Composer for dependency management
 - Required developer dependencies: phpstan/phpstan, friendsofphp/php-cs-fixer
-- PRADO Composer Extension is a PRADO Plugin Module within the PRADO 4.3 Framework.
+- PRADO Composer Extension is a PRADO Plugin Module within the PRADO 4.2+ Framework.
 
 ## Cursor/Copilot Instructions
 No specific Cursor or Copilot rules currently defined for this project.
