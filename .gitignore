@@ -1,10 +1,15 @@
 # cache directories
 Thumbs.db
-*.DS_Store
+.DS_Store
 *.empty
 
+#dev tools
+.php-cs-fixer.cache
+.phpunit.cache
+.phpunit.result.cache
+
 #phpstorm project files
-.idea
+/.idea
 
 #netbeans project files
 nbproject
@@ -13,9 +18,15 @@ nbproject
 .buildpath
 .project
 .settings
+atlassian-ide-plugin.xml
 
 
 # mac deployment helpers
 switch
 index
-.php-cs-fixer.cache
+
+# Composer stuff
+/vendor
+vendor/*
+composer.lock
+.cache
