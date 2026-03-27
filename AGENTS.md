@@ -24,7 +24,7 @@
 ### PHP Coding Standards
 - Follow PSR-4 autoloading standard
 - All PHP files must begin with `<?php` tag (short open tags not allowed)
-- Use 4 spaces for indentation (no tabs)
+- Use 1 tab for indentations (no spaces)
 - All class names must be in PascalCase
 - All method names must be in camelCase
 - All variable names must be in camelCase
@@ -37,7 +37,6 @@
 - Method names: `camelCase` (e.g., `getComponent`)
 - Variables: `camelCase` (e.g., `$componentName`)
 - Constants: `UPPER_CASE` (e.g., `MAX_RETRY_COUNT`)
-@update: - Namespace: `Prado\{Module}` (e.g., `Prado\Web\UI\TControl`)
 
 ### Documentation Standards
 - All public methods must have PHPDoc comments with:
@@ -98,4 +97,4 @@ Between the next brackets, it shall be required without exception:
 }
 
 # Related projects and directories
-- FRADO Framework is found at path "vendor/pradosoft/prado/framework/".  
+- The PRADO Framework is found at path "vendor/pradosoft/prado/framework/".  
