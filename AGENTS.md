@@ -72,7 +72,8 @@
 - Follow the component lifecycle: init → load → preRender → render → unload
 - Data components should support `TActiveRecord` pattern
 - All UI controls should have proper template support and state management
-- A full check consists of the 4 checks: no php compile errors, phpstan, composer unittest, and php-cs-fixer
+- A full check consists of the 4 checks (in order): php compile, php-cs-fixer, phpstan, composer unittest (must all pass successfully)
+- A full check must be done for code to be ready to commit.
 - All changes must be backward compatible.
 - The current version is 1.0.1. git HEAD is working on version 1.0.2.
 - Use the next release version when adding new files, methods, or classes comments "@since"
