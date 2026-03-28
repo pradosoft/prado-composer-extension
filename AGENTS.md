@@ -5,8 +5,8 @@
 ### Running Tests
 - **Unit Tests**: `composer unittest` - runs all unit tests
 - **Functional Tests**: `composer functionaltest` - runs all functional tests  
-- **Single Test File**: `vendor/bin/phpunit --testsuite unit tests/unit/Path/To/TestFile.php`
-- **Single Test Method**: `vendor/bin/phpunit --testsuite unit tests/unit/Path/To/TestFile.php::testMethodName`
+- **Single Test File**: `vendor/bin/phpunit tests/unit/Path/To/TestFile.php`
+- **Single Test Method**: `vendor/bin/phpunit tests/unit/Path/To/TestFile.php::testMethodName`
 
 ### Linting and Code Analysis
 - **PHPStan Analysis**: `vendor/bin/phpstan analyse src/ --memory-limit=512M`
@@ -53,7 +53,7 @@
 - Throw appropriate exceptions (`Exception`, `InvalidArgumentException`, etc.)
 - Return false or null for methods that are designed to fail gracefully
 - All methods should handle edge cases and validate input parameters
-- PRADO Exceptions use errorCodes specified in framework/Exceptions/messages/messages.txt; the master error Code file in English. This is only for user information display.
+- PRADO Exceptions use errorCodes specified in framework/Exceptions/messages/messages.txt; the master error Code file in English. messages.txt is purely for user information display only.
 
 ### Imports and Includes
 - Use PSR-4 autoloading - no manual includes required
