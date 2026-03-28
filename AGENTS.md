@@ -53,7 +53,7 @@
 - Throw appropriate exceptions (`Exception`, `InvalidArgumentException`, etc.)
 - Return false or null for methods that are designed to fail gracefully
 - All methods should handle edge cases and validate input parameters
-- PRADO Exceptions use errorCodes specified in framework/Exceptions/messages/messages.txt; the master error Code file in English.
+- PRADO Exceptions use errorCodes specified in framework/Exceptions/messages/messages.txt; the master error Code file in English. This is only for user information display.
 
 ### Imports and Includes
 - Use PSR-4 autoloading - no manual includes required
