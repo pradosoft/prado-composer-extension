@@ -1,0 +1,27 @@
+
+# Working Knowledge - Knowledge Retention Sub-Process Instructions
+- The goal of "Working Knowledge" is to make Coding Agents more efficient at project tasks.
+- The Working Knowledge directory is "agents/" and contain all Project Working Knowledge files.
+- The project directory hierarchy of "./" is replicated in "agents/"
+- INDEX.md is the main knowledge file of a directory, functioning like CLAUDE.md
+- SUMMARY.md is the optimized brief summary of a directory.
+- Every class has a knowledge file with the same relative path, ending in ".md"
+- If only a brief summary of a directory is needed, read its SUMMARY.md
+- If only a summary of a class is needed, read its "<class name>.md"
+- Scan for Project Knowledge (via "find agents/ -type f -name '*.md'") and parse relevant knowledge files relating to directories, classes, summaries, processes, and manuals for tasks at hand
+- When class files are updated, its directory Working Knowledge files and summaries must be updated.
+- When a directory Working Knowledge file is updated, the parent directory Knowledge files and summaries must be recursively updated; start with the deepest directory paths first
+- An 'INDEX.md' knowledge file contains the extensive summary:
+  - "# <relative path and/or file>"
+  - "### Directories" at the top containing
+	- Hyperlinked breadcrumbs to all parent directories (except self-references)
+	  - Breakcrumb Format (eg. Web/UI/WebControls/TWebControl): "[project](../../../INDEX.md) / [Web](../../INDEX.md) / [UI](../INDEX.md) / [WebControls](./INDEX.md) / **`TWebControl`**”
+	- a table of hyperlinked subdirectories (if they exist), and a brief summary of their content and features
+  - then the directory "## Purpose"
+  - classes within the directory and their features, use, and purpose
+  - any other information that a coding agent may need to efficiently understand the directory.
+- A 'SUMMARY.md' must summarize each class in the containing directory:
+  - with their purpose and public API signatures
+  - be at most 2 sentences
+- All class and directory references must be hyperlinked to their related knowledge file; Self-references are bolded with backticks and no link
+- All INDEX.md and class Knowledge files must have the same bread crumb style for consistency: "### Directories
