@@ -43,7 +43,18 @@
 		}
 	},
 	"scripts": {
-		"unittest": "vendor/bin/phpunit --testsuite unit"
+		"devtools": [
+			"composer require pradosoft/prado",
+			"composer require --dev friendsofphp/php-cs-fixer",
+			"composer require --dev phpstan/phpstan",
+			"composer require --dev phpunit/phpunit"
+		],
+		"unittest": "vendor/bin/phpunit --testsuite unit",
+		"fulltest": [
+			"php-cs-fixer fix",
+			"phpstan analyse --memory-limit=512M",
+			"phpunit --testsuite unit"
+		]
 	},
 	"extra": {
 		"bootstrap": "PradoComposerExtension\\MainModule"

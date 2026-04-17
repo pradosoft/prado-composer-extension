@@ -30,12 +30,11 @@
 - All class properties must be declared with visibility modifiers (public, protected, private)
 
 ### Naming Conventions
-- Class names: `TPascalCase` (e.g., `TComponent`)
-- Class name prefix: `T*` (e.g. `TApplication`)
+- Class names: `PascalCase` (e.g., `MainModule`)
 - Method names: `camelCase` (e.g., `getComponent`)
 - Variables: `camelCase` (e.g., `$componentName`)
 - Constants: `SCREAMING_SNAKE_CASE` (e.g., `MAX_RETRY_COUNT`)
-- Namespace: `Prado\{Module}` (e.g., `Prado\Web\UI\TControl`)
+- Namespace: `PradoComposerExtension\{Module}` (e.g., `PradoComposerExtension\MainModule`)
 - Template file extension: ".tpl"
 - Web Page template file extension: ".page"
 
@@ -52,13 +51,13 @@
 - Inline comments should be in English and start with `//`
 - When documenting new methods or classes with "@since" use the next release version.
 - All documentation should be written in present perfect tense
+- All code examples open with "```" plus the language and close with "```"
 
 ### Error Handling
 - Use try/catch blocks for operations that can fail
 - Throw appropriate PRADO exceptions (`TInvalidDataValueException`, `TInvalidOperationException`, etc.)
 - Return false or null for methods that are designed to fail gracefully
 - All methods should handle edge cases and validate input parameters
-- Extension Exceptions use errorCodes specified in src/messages.txt; messages.txt is purely for user information display only.
 
 ### Imports and Includes
 - Use PSR-4 autoloading - no manual includes required
@@ -68,7 +67,8 @@
 
 
 ### Framework Specific Guidelines
-- All components inherit from `TComponent` base class
+- This is a Composer extension for PRADO, not part of the core framework
+- All components inherit from `TComponent` base class (from PRADO framework)
 - `TComponent` has features for dynamic event and extension by attached Behaviors (__call, __callStatic), dynamic properties (__get, __set, __isset, __unset), __clone, __sleep, __wakeup, and _getZappableSleepProps
 - Behaviors can be attached to any `TComponent` to alter its behavior and functionality.
 - Use the event-driven programming model with events; like `onLoad`, `onInit`, `onPreRender`
@@ -84,7 +84,6 @@
 - Follow the TPage Lifecycle (via TPageService::runPage): onPreInit → initRecursive → onInitComplete → loadPageState (POST/Callback) → processPostData (POST/Callback) → onPreLoad → loadRecursive → processPostData (POST/Callback) → raiseChangedEvents (POST/Callback) → raisePostBackEvent (POST-only) → processCallbackEvent (Callback-only) → onLoadComplete → preRenderRecursive  onPreRenderComplete → savePageState → onSaveStateComplete → renderControl (GET/POST) → renderCallbackResponse (Callback-only) → unloadRecursive
 - XML and PHP is supported for application configuration 
 - TPageService::onPreRunPage gives PRADO Modules event access to the TPage Lifecycle before it runs
-- 'framework/classes.php' MUST be updated with all new classes.
 - Web Pages are PHP classes with a ".page" TTemplate file with the same base name
 - UI Portlets are PHP classes with a ".tpl" TTemplate file with the same base name
 - Data components should support `TActiveRecord` pattern
@@ -113,6 +112,11 @@
 - Composer for dependency management
 - Required developer dependencies for code checking: phpunit/phpunit, phpstan/phpstan, friendsofphp/php-cs-fixer
 - Presume that project dependencies are installed
+- Project dependencies are found in "vendor/"
+- For '--dev', the PRADO Framework is at path "vendor/pradosoft/prado/":
+  - PRADO source code is in "framework/"
+  - It has an AGENTS.md file
+  - It has working knowledge memory in "agents/"
 
 ## Cursor/Copilot Instructions
 No specific Cursor or Copilot rules currently defined for this project.
